@@ -38,9 +38,272 @@ html, body {
 .wrapper {
     min-height: 100%;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
-_container {
+._container {
     max-width: 1046px;
     margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: content-box;
 }
+
+._ibg {
+    position: relative;
+}
+
+._ibg img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+}
+
+
+/*-------------HEADER------------------------*/
+
+.header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    min-height: 104px;
+    padding: 5px 0;  /*Отступы безопасности*/
+}
+
+.header__logo {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    color: #252B42;
+    letter-spacing: 0.1px;
+}
+
+.header__menu {
+    margin: 0 0 0 132px;
+}
+
+.menu__ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu__li:not(:last-child) {
+    margin: 0 21px 0 0;
+}
+
+.menu__link {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: calc(24 / 14 * 100%);
+    letter-spacing: 0.2px;
+    color: #737373;
+}
+
+
+
+/*------------MAIN-------------------*/
+
+.page {
+    flex: 1 1 auto;
+}
+.main-block {
+    position: relative;
+}
+
+.main-block__body {
+    padding-top: 184px;
+    position: relative;
+    z-index: 2;
+    max-width: 509px;
+}
+
+@media(max-width: 992px) {
+    .main-block__body {
+        padding-top: 124px;
+    }
+}
+
+.main-block__body > *:not(:last-child) {
+    margin-bottom: 35px;
+}
+
+.main-block__title {
+    font-weight: 800;
+    font-size: 58px;
+    line-height: calc(80/58 * 100%);
+    letter-spacing: 0.2px;
+    color: #252B42;
+}
+
+@media(max-width: 992px) {
+    .main-block__title {
+        font-size: 42px;
+    }
+}
+
+.main-block__subtitle {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: calc(30/20 * 100%);
+    letter-spacing: 0.2px;
+    color: #737373;
+}
+
+.main-block__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px 0;
+    padding-bottom: 191px;
+}
+
+.main-block__button:not(:last-child) {
+    margin-right: 10px;
+}
+
+.main-block__button {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    border-radius: 37px;
+    min-height: 48px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.2px;
+    padding: 10px 36px;
+    margin: 10px 0;
+}
+
+@media(max-width: 479px) {
+    .main-block__button {
+        flex: 1 1 100%;
+    }
+}
+
+.main-block__button_orange {
+    background: #FF7B47;
+    color: #FFFFFF;
+}
+
+.main-block__button_green {
+    border: 1px solid #0D5C63;
+    color: #0D5C63;
+}
+
+.main-block__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media(max-width: 1300px) {
+    .main-block__image img{
+        object-position: right;
+    }
+}
+
+@media(max-width: 992px) {
+    .main-block__image img{
+        opacity: 0.5;
+    }
+}
+
+
+
+.card-block__container {
+    position: relative;
+    z-index: 2;
+    margin-top: -111px;
+}
+
+.card-block__body {
+}
+
+@media (min-width: 670px) {
+    .card-block__body {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px -30px;
+    }
+}
+
+.card-block__column {
+    flex: 0 1 33.333%;
+    margin-bottom: 30px;
+}
+
+@media (min-width: 670px) {
+    .card-block__column {
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 992px) {
+    .card-block__column {
+        flex: 0 1 50%;
+    }
+}
+
+.card-block__item {
+    padding: 35px 40px;
+    background: #FFFFFF;
+    box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
+}
+
+.card-block__item > *:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.card-block__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0.1px;
+    color: #252B42;
+}
+
+.card-block__subtitle {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: #737373;
+}
+
+.card-block_green {
+    background: #0D5C63;
+}
+
+.card-block__title_color-white {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: calc(32 / 24 *100%);
+    letter-spacing: 0.1px;
+    color: #FFFFFF;
+}
+
+.card-block__subtitle_color-white {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: calc(20 / 14 *100%);
+    letter-spacing: 0.2px;
+    color: #FFFFFF;
+}
+
+
+/*-----------FOOTER------------------*/
+
+
+
