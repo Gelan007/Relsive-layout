@@ -34,6 +34,7 @@ html, body {
     font-size: 14px;
     color:#252B42;
     font-family: Montserrat;
+    background: #FAFAFA;
 }
 .wrapper {
     min-height: 100%;
@@ -221,6 +222,7 @@ html, body {
 }
 
 
+/*-----CARD-----------------------*/
 
 .card-block__container {
     position: relative;
@@ -300,6 +302,120 @@ html, body {
     line-height: calc(20 / 14 *100%);
     letter-spacing: 0.2px;
     color: #FFFFFF;
+}
+
+/*-------HEADER-BLOCK------------------------------*/
+.header-block {
+    text-align: center;
+}
+
+.header-block__title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: calc(57 / 40 * 100%);
+    letter-spacing: 0.2px;
+    color: #252B42;
+}
+
+.header-block__title:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+
+.header-block__sub-title {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: calc(20 / 14 * 100%);
+    text-align: center;
+    letter-spacing: 0.2px;
+    color: #737373;
+}
+
+@media (max-width: 992px) {
+    .header-block__title {
+        font-size: 35px;
+    }
+}
+
+/*-------ADVANTAGES--------------------------*/
+
+.advantages {
+    padding: 80px 0;
+}
+
+@media (max-width: 992px) {
+    .advantages {
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .advantages {
+        padding: 40px 0;
+    }
+}
+
+.advantages__header {
+    margin-bottom: 50px;
+}
+
+.advantages__body {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px -30px;
+}
+
+
+.advantages__column {
+    flex: 0 1 25%;
+    padding: 0 15px;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 1020px) {
+    .advantages__column {
+        flex: 0 1 50%;
+    }
+}
+
+@media (max-width: 560px) {
+    .advantages__column {
+        flex: 0 1 100%;
+    }
+}
+
+.advantages__item {
+    padding: 30px;
+    background: #FFFFFF;
+    text-align: center;
+}
+
+.advantages__item > *:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.advantages__icon {
+    height: 48px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.advantages__title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: calc(57 / 40 * 100%);
+    letter-spacing: 0.2px;
+    color: #252B42;
+}
+
+.advantages__subtitle {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: calc(24 / 16 * 100%);
+    text-align: center;
+    letter-spacing: 0.1px;
+    color: #737373;
 }
 
 
